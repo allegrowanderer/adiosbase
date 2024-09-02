@@ -14,3 +14,33 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.ship-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Ships are unclickable by default */
+}
+
+.ship {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('/spaceship.png');
+  background-size: cover;
+  transition: transform 5s linear, bottom 5s linear;
+  pointer-events: auto; /* Allow ships to be clickable */
+  z-index: 1;
+}
+.ship.explode {
+  background-image: url('/explosion.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1; /* Ensure it's visible */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(2); /* Explosion scaling effect */
+}
+
