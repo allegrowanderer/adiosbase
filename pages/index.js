@@ -88,7 +88,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-between items-center min-h-screen p-4">
+    <div className="flex flex-col justify-center items-center min-h-screen p-4">
       <div className="flex flex-col items-center sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8">
         {/* Text "ADIOS" on the left side */}
         <div className="text-white text-6xl sm:text-8xl font-custom leading-none">
@@ -115,8 +115,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* "BUY NOW!!!" Link at the bottom */}
-      <div className="mt-8">
+      {/* "BUY NOW!!!" Link directly below the adios.png */}
+      <div className="mt-8 flex justify-center">
         <a 
           href="https://ape.store/base/0xbcba68c664a16112cce31623106881173ff76b71" 
           target="_blank" 
